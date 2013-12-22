@@ -89,24 +89,24 @@ PRODUCT_COPY_FILES += \
 	
 # Prebuilts: /system/bin/*	
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/bin/bridgemgrd:system/bin/bridgemgrd \
-	$(LOCAL_PATH)/prebuilt/system/bin/btnvtool:system/bin/btnvtool \
-	$(LOCAL_PATH)/prebuilt/system/bin/ds_fmc_appd:system/bin/ds_fmc_appd \
-	$(LOCAL_PATH)/prebuilt/system/bin/ks:system/bin/ks \
-	$(LOCAL_PATH)/prebuilt/system/bin/mpdecision:system/bin/mpdecision \
-	$(LOCAL_PATH)/prebuilt/system/bin/netmgrd:system/bin/netmgrd \
-	$(LOCAL_PATH)/prebuilt/system/bin/port-bridge:system/bin/port-bridge \
-	$(LOCAL_PATH)/prebuilt/system/bin/qcks:system/bin/qcks \
-	$(LOCAL_PATH)/prebuilt/system/bin/qmiproxy:system/bin/qmiproxy \
-	$(LOCAL_PATH)/prebuilt/system/bin/qmuxd:system/bin/qmuxd \
-	$(LOCAL_PATH)/prebuilt/system/bin/rild:system/bin/rild \
-	$(LOCAL_PATH)/prebuilt/system/bin/rmt_storage:system/bin/rmt_storage \
-	$(LOCAL_PATH)/prebuilt/system/bin/usbhub:system/bin/usbhub \
-	$(LOCAL_PATH)/prebuilt/system/bin/usbhub_init:system/bin/usbhub_init \
-	$(LOCAL_PATH)/prebuilt/system/bin/wpa_supplicant:system/bin/wpa_supplicant \
-	$(LOCAL_PATH)/prebuilt/system/bin/e2fsck:system/bin/e2fsck \
-	$(LOCAL_PATH)/prebuilt/system/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
-	$(LOCAL_PATH)/prebuilt/system/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
+#   $(LOCAL_PATH)/prebuilt/system/bin/bridgemgrd:system/bin/bridgemgrd \
+#	$(LOCAL_PATH)/prebuilt/system/bin/btnvtool:system/bin/btnvtool \
+#	$(LOCAL_PATH)/prebuilt/system/bin/ds_fmc_appd:system/bin/ds_fmc_appd \
+#	$(LOCAL_PATH)/prebuilt/system/bin/ks:system/bin/ks \
+#	$(LOCAL_PATH)/prebuilt/system/bin/mpdecision:system/bin/mpdecision \
+#	$(LOCAL_PATH)/prebuilt/system/bin/netmgrd:system/bin/netmgrd \
+#	$(LOCAL_PATH)/prebuilt/system/bin/port-bridge:system/bin/port-bridge \
+#	$(LOCAL_PATH)/prebuilt/system/bin/qcks:system/bin/qcks \
+#	$(LOCAL_PATH)/prebuilt/system/bin/qmiproxy:system/bin/qmiproxy \
+#	$(LOCAL_PATH)/prebuilt/system/bin/qmuxd:system/bin/qmuxd \
+#	$(LOCAL_PATH)/prebuilt/system/bin/rild:system/bin/rild \
+#	$(LOCAL_PATH)/prebuilt/system/bin/rmt_storage:system/bin/rmt_storage \
+#	$(LOCAL_PATH)/prebuilt/system/bin/usbhub:system/bin/usbhub \
+#	$(LOCAL_PATH)/prebuilt/system/bin/usbhub_init:system/bin/usbhub_init \
+#	$(LOCAL_PATH)/prebuilt/system/bin/wpa_supplicant:system/bin/wpa_supplicant \
+#	$(LOCAL_PATH)/prebuilt/system/bin/e2fsck:system/bin/e2fsck \
+#	$(LOCAL_PATH)/prebuilt/system/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
+#	$(LOCAL_PATH)/prebuilt/system/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
 	$(LOCAL_PATH)/prebuilt/system/bin/qseecomd:system/bin/qseecomd \
 	$(LOCAL_PATH)/prebuilt/system/bin/thermald:system/bin/thermald \
 	$(LOCAL_PATH)/prebuilt/system/etc/gps.conf:system/etc/gps.conf \
