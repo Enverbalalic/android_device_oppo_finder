@@ -11,21 +11,20 @@
 # limitations under the License.
 #
 
-# Get the long list of APNs
-PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
+# Inherit from finder device
+$(call inherit-product, device/oppo/finder/device.mk)
+
+# Screen
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
 
 # Device identifier
-PRODUCT_NAME := full_finder
+PRODUCT_NAME := cm_finder
 PRODUCT_DEVICE := finder
-PRODUCT_BRAND := oppo
-PRODUCT_MANUFACTURER := oppo
+PRODUCT_BRAND := Oppo
+PRODUCT_MANUFACTURER := Oppo
 PRODUCT_MODEL := Finder-X907
 
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/oppo/finder/device.mk)
-$(call inherit-product-if-exists, vendor/oppo/finder/full_finder.mk)

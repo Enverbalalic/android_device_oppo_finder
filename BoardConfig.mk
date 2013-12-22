@@ -15,14 +15,14 @@
 TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+# TEMPORARY
 TARGET_NO_RECOVERY := true
+BOARD_WANTS_EMMC_BOOT := true
 
 # Platform 
 TARGET_BOARD_PLATFORM := msm8660
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
-BOARD_USES_STE_HARDWARE := true
-TARGET_AVOID_DRAW_TEXTURE_EXTENSION := true
-TARGET_HAVE_HDMI_OUT := true
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
 
 # Architecture
 TARGET_ARCH := arm
@@ -30,32 +30,40 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := scorpion
 ARCH_ARM_HAVE_TLS_REGISTER := true
-ARCH_ARM_HAVE_NEON := true
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 
-# Partitions
-BOARD_NAND_PAGE_SIZE := 4096
-BOARD_NAND_SPARE_SIZE := 128
-TARGET_USERIMAGES_USE_EXT4 := true
-
-# Graphics
-USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/oppo/finder/prebuilt/system/lib/egl/egl.cfg
-ENABLE_WEBGL := true
+# Kernel
+BOARD_KERNEL_BASE := 0x40200000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom kgsl.mmutype=gpummu
+#console=ttyHSL0,115200,n8 androidboot.hardware=qcom kgsl.mmutype=gpummu vmalloc=400M
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01300000
+TARGET_KERNEL_CONFIG := cyanogenmod_finder_defconfig
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/finder/bluetooth
 
-# Audio
-BOARD_USES_GENERIC_AUDIO := true
+# Graphics
+BOARD_EGL_CFG := device/oppo/finder/configs/egl.cfg
+TARGET_QCOM_DISPLAY_VARIANT := caf
+USE_OPENGL_RENDERER := true
+TARGET_USES_ION := true
+TARGET_USES_C2D_COMPOSITION := true
 
-# USB Mounting
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+# Recovery
+TARGET_RECOVERY_FSTAB := device/oppo/finder/configs/fstab.finder
+RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
-#Other
-USE_CAMERA_STUB := true
-DISABLE_DEXPREOPT := true
-BOARD_USE_LEGACY_TOUCHSCREEN := true
+TARGET_USERIMAGES_USE_EXT4 := true
+# BOARD_BOOTIMAGE_PARTITION_SIZE :=
+# BOARD_RECOVERYIMAGE_PARTITION_SIZE :=
+# BOARD_SYSTEMIMAGE_PARTITION_SIZE :=
+# BOARD_USERDATAIMAGE_PARTITION_SIZE :=
+ 

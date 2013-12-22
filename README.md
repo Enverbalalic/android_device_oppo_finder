@@ -1,2 +1,1 @@
-android_device_oppo_finder
-==========================
+Device configuration for Oppo Finder (X907)
