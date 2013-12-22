@@ -13,16 +13,16 @@
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from finder device
-$(call inherit-product, device/oppo/finder/device.mk)
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/oppo/find5/device.mk)
+$(call inherit-product-if-exists, vendor/oppo/find5/find5-vendor.mk)
 
 # Screen
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # Device identifier
-PRODUCT_NAME := cm_finder
+PRODUCT_NAME := full_finder
 PRODUCT_DEVICE := finder
 PRODUCT_BRAND := Oppo
 PRODUCT_MANUFACTURER := Oppo
