@@ -31,6 +31,11 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable
+    
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=X907 \
+    BUILD_FINGERPRINT="OPPO/msm8660_surf/msm8660_surf:4.4.2/KOT49H/eng.oppo.214859:user/release-keys" \
+    PRIVATE_BUILD_DESC="msm8660_surf-user 4.4.2 KOT49H eng.oppo.214859 release-keys"
 
 # Device specific
 PRODUCT_NAME    := cm_finder

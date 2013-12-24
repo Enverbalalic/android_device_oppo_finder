@@ -14,8 +14,8 @@
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/oppo/find5/device.mk)
-$(call inherit-product-if-exists, vendor/oppo/find5/find5-vendor.mk)
+$(call inherit-product, device/oppo/finder/device.mk)
+$(call inherit-product-if-exists, vendor/oppo/finder/finder-vendor.mk)
 
 # Screen
 TARGET_SCREEN_HEIGHT := 800
